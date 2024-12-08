@@ -27,7 +27,7 @@
       },
       {
         "name": "keyword.control.macroquest2",
-        "match": "(?<=^|\\s)(${commandRegex})\\b"
+        "match": "(?i)(?<=^|\\s)(${commandRegex})\\b"
       },
       {
         "name": "invalid.illegal.macroquest2",

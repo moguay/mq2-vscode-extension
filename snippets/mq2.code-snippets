@@ -8,6 +8,15 @@
         ],
         "description": "For Loop"
     },
+    "While Block": {
+        "prefix": "while",
+        "body": [
+            "while (${1:condition}) {",
+            "\t${2:// code}",
+            "}"
+        ],
+        "description": "While loop with braces"
+    },
     "Declare": {
         "prefix": "/declare",
         "body": [
@@ -24,21 +33,28 @@
         "description": "If Inline"
     },
     "If Block": {
-        "prefix": "if",
+        "prefix": "/if",
         "body": [
-            "if (${1:condition}) {",
-            "\t${2:// code}",
+            "/if (${1:condition}) {",
+            "  ${2:// code}",
             "}"
         ],
-        "description": "If statement with braces"
+        "description": "If Block with Braces"
     },
-    "While Block": {
-        "prefix": "while",
+    "Function Definition": {
+        "prefix": "/sub",
         "body": [
-            "while (${1:condition}) {",
-            "\t${2:// code}",
-            "}"
+            "/sub ${1:functionName}(${2|string,bool,int,float|} ${3:varMame})",
+            "  ${4:// Function body}",
+            "/return"
         ],
-        "description": "While loop with braces"
+        "description": "Define a function using Sub"
+    },
+    "Function Call": {
+        "prefix": "/call",
+        "body": [
+            "/call ${1:functionName} ${2:args}"
+        ],
+        "description": "Call a function using /call"
     }
 }

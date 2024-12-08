@@ -2,7 +2,7 @@
     "name": "mq2-vscode-extension",
     "displayName": "MacroQuest2 Syntax Highlighting",
     "description": "Syntax highlighting and features for MacroQuest2 scripts.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "Guizmo",
     "engines": {
       "vscode": "^1.78.0"
