@@ -1,0 +1,51 @@
+{
+    "name": "mq2-vscode-extension",
+    "displayName": "MacroQuest2 Syntax Highlighting",
+    "description": "Syntax highlighting and features for MacroQuest2 scripts.",
+    "version": "1.0.0",
+    "publisher": "Guizmo",
+    "engines": {
+      "vscode": "^1.78.0"
+    },
+    "categories": ["Programming Languages"],
+    "contributes": {
+      "languages": [
+        {
+          "id": "macroquest2",
+          "extensions": [".mac", ".inc", ".mq2"],
+          "aliases": ["MacroQuest2"],
+          "configuration": "./language-configuration.json"
+        }
+      ],
+      "grammars": [
+        {
+          "language": "macroquest2",
+          "scopeName": "source.macroquest2",
+          "path": "./build/macroquest2.tmLanguage.json"
+        }
+      ],
+      "configurationDefaults": {
+        "[macroquest2]": {
+          "editor.bracketPairColorization.enabled": true,
+          "editor.guides.bracketPairs": "active"
+        }
+      }
+    },
+    "scripts": {
+      "generate-grammar": "node generateGrammar.js",
+      "vsce:package": "npm run generate-grammar && vsce package"
+    },
+    "devDependencies": {
+      "vsce": "^2.11.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/moguay/mq2-vscode-extension.git"
+    },
+    "keywords": ["macroquest2", "mq2", "vscode", "syntax", "highlighting"],
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/moguay/mq2-vscode-extension/issues"
+    },
+    "homepage": "https://github.com/moguay/mq2-vscode-extension"
+}

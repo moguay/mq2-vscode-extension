@@ -1,0 +1,46 @@
+{
+    "comments": {
+        // Symbol used for single-line comments. Remove this entry if your language does not support single-line comments.
+        "lineComment": "|",
+        // Symbols used for the start and end of a block comment. Remove this entry if your language does not support block comments.
+        "blockComment": ["|**", "**|"]
+    },
+    "brackets": [
+        // Pairs of brackets for syntax highlighting and auto-closing functionality.
+        ["${", "}"],
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"]
+    ],
+    "autoClosingPairs": [
+        // Pairs of characters that should automatically close when the opening character is typed.
+        ["${", "}"],
+        ["|**", "**|"],
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["\"", "\""],
+        ["'", "'"]
+    ],
+    "surroundingPairs": [
+        // Pairs of characters that should surround selected text when typing the opening character.
+        ["${", "}"],
+        ["{", "}"],
+        ["[", "]"],
+        ["(", ")"],
+        ["\"", "\""],
+        ["'", "'"]
+    ],
+    "ignoredScopes": [
+        // Scopes where auto-closing pairs and surrounding pairs should be ignored.
+        "comment.line",
+        "comment.block"
+    ],
+    "folding": {
+        "markers": {
+            // Custom folding markers for code folding.
+            "start": "(i?)^\\s*sub\\s+", // Regex to match the start of a foldable block.
+            "end": "(i?)^\\s*\/return"   // Regex to match the end of a foldable block.
+        }
+    }
+}

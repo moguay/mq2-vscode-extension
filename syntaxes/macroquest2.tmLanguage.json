@@ -1,0 +1,64 @@
+{
+    "name": "MacroQuest2",
+    "scopeName": "source.macroquest2",
+    "fileTypes": ["mac", "inc", "mq2"],
+    "patterns": [
+      {
+        "name": "keyword.preprocessor.macroquest2",
+        "match": "(?i)^\\s*(${directivesRegex})\\s"
+      },
+      {
+        "name": "entity.name.top_objects",
+        "match": "(?:\\$\\{)(${top_objectsRegex})(?:\\[|\\}|\\.)",
+        "captures": {
+          "1": {
+            "name": "entity.name.macroquest2"
+          }
+        }
+      },
+      {
+        "name": "support.function.data_types",
+        "match": "(?:\\.)(${data_typesRegex})(?=(?:\\.|\\[|\\}|$))",
+        "captures": {
+          "1": {
+            "name": "support.function.macroquest2"
+          }
+        }
+      },
+      {
+        "name": "keyword.control.macroquest2",
+        "match": "(?<=^|\\s)(${commandRegex})\\b"
+      },
+      {
+        "name": "invalid.illegal.macroquest2",
+        "match": "(?<=^|\\s)(/)(?!\\{)(?!${commandRegex})(?!\\${[^}]+})\\S+"
+      },
+      {
+        "name": "keyword.control.macroquest2",
+        "match": "(?<=^|\\s)(Sub|else)\\b"
+      },
+      {
+        "name": "variable.other.macroquest2",
+        "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b"
+      },
+      {
+        "name": "string.quoted.double.macroquest2",
+        "match": "\"([^\"\\n]*)\""
+      },
+      {
+        "name": "constant.numeric.macroquest2",
+        "match": "\\b\\d+\\b"
+      },
+      {
+        "name": "comment.block.macroquest2",
+        "begin": "\\|\\*\\*",
+        "end": "\\*\\*\\|"
+      },
+      {
+        "name": "comment.line.macroquest2",
+        "match": "^(\\s*)\\|.*$"
+      }
+    ],
+    "uuid": "macroquest2-syntax"
+  }
+  
